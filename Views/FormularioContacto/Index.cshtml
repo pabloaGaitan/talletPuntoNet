@@ -1,0 +1,33 @@
+﻿@model Contacto
+@{
+    ViewData["Title"] = "Contacto";
+}
+
+<div class="container">
+  <div class="row">
+    <div class="column">
+      
+    </div>
+    <div class="column">
+      <form asp-controller="FormularioContacto" asp-action="Index" method="post">
+        
+        <input type="text" id="fname" name="nombre" placeholder="Nombre" asp-for="nombre">
+        <span asp-validation-for="nombre" class="text-danger"></span>
+        <br>
+        <input type="text" id="lname1" name="apellido" placeholder="Apellido" asp-for="apellido">
+        <span asp-validation-for="apellido" class="text-danger"></span>
+        <br>
+         <input type="text" id="lname2" name="telefono" placeholder="Telefono" asp-for="telefono">
+        <span asp-validation-for="telefono" class="text-danger"></span>
+        <br>
+        <input type="text" id="lname3" name="email" placeholder="Correo electronico" asp-for="email">
+        <span asp-validation-for="email" class="text-danger"></span>
+        <br>
+        <textarea id="subject" name="mensaje" placeholder="Mensaje" style="height:170px" asp-for="mensaje"></textarea>
+        <span asp-validation-for="mensaje" class="text-danger"></span>
+        <br>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+  </div>
+</div>
